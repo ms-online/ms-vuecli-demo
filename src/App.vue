@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <FormHelper>
-      <h2 slot="title">{{ title }}</h2>
+      <div slot="title">
+        <h2>{{ title }}</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+
       <p slot="content">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat,
         blanditiis.
