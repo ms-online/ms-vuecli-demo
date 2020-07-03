@@ -1,6 +1,5 @@
 <template>
   <div class="users">
-    <p>{{ users }}</p>
     <ul>
       <li
         @click="user.show = !user.show"
@@ -11,7 +10,7 @@
         <h4 v-show="user.show">{{ user.age }}</h4>
       </li>
     </ul>
-    <p>{{ test() }}</p>
+    <button @click="deleteUsers()">删除</button>
   </div>
 </template>
 
@@ -30,8 +29,8 @@ export default {
   },
 
   methods: {
-    test() {
-      console.log(this.users);
+    deleteUsers() {
+      this.users.pop();
     },
   },
 };

@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <!-- 3.使用组件 -->
-    <Header />
+    <Header v-bind:title="title" />
     <users v-bind:users="users" />
-    <Footer />
+    <hr />
+    <users v-bind:users="users" />
+    <Footer v-bind:title="title" />
   </div>
 </template>
 
@@ -26,6 +28,7 @@ export default {
         { name: 'Yellemy7', age: 25, show: false },
         { name: 'Yellemy8', age: 25, show: false },
       ],
+      title: '米修在线',
     };
   },
   components: {
