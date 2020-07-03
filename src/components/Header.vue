@@ -18,7 +18,9 @@ export default {
   },
   methods: {
     changeTitle() {
-      this.title = 'Yellemy';
+      // this.title = 'Yellemy'; 不能直接在子组件修改父组件的值
+      // 通过注册事件  参数1:事件名称，参数2...:传递的值
+      this.$emit('titleChanged', 'Yellemy');
     },
   },
 };

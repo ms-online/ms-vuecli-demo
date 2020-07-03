@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 3.使用组件 -->
-    <Header v-bind:title="title" />
+    <Header @titleChanged="updateTitle" v-bind:title="title" />
     <users v-bind:users="users" />
     <hr />
     <users v-bind:users="users" />
@@ -37,6 +37,12 @@ export default {
     // 'ms-users': Users,
     users: Users,
     Footer,
+  },
+  methods: {
+    updateTitle(newTitle) {
+      // console.log(newTitle);
+      this.title = newTitle;
+    },
   },
 };
 </script>
