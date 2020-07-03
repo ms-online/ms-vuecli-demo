@@ -1,5 +1,6 @@
 <template>
   <div class="users">
+    <p>{{ users }}</p>
     <ul>
       <li
         @click="user.show = !user.show"
@@ -10,24 +11,28 @@
         <h4 v-show="user.show">{{ user.age }}</h4>
       </li>
     </ul>
+    <p>{{ test() }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      users: [
-        { name: 'Yellemy1', age: 25, show: false },
-        { name: 'Yellemy2', age: 25, show: false },
-        { name: 'Yellemy3', age: 25, show: false },
-        { name: 'Yellemy4', age: 25, show: false },
-        { name: 'Yellemy5', age: 25, show: false },
-        { name: 'Yellemy6', age: 25, show: false },
-        { name: 'Yellemy7', age: 25, show: false },
-        { name: 'Yellemy8', age: 25, show: false },
-      ],
-    };
+  //   props: ['users'],
+  props: {
+    users: {
+      type: Array,
+      required: true,
+    },
+    //   data() {
+    //     return {
+    //       users: 'users',
+    //     };
+  },
+
+  methods: {
+    test() {
+      console.log(this.users);
+    },
   },
 };
 </script>
