@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <h1>App.vue</h1>
+    <h2>App.vue</h2>
     <!-- 3.使用组件 -->
     <users />
   </div>
@@ -18,4 +20,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+h1 {
+  color: red;
+}
+
+h2 {
+  color: aqua;
+}
+</style>
