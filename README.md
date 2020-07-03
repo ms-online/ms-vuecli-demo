@@ -1,5 +1,6 @@
 # vuecli-demo
 
-## lesson11 slot 插槽的使用：占位
+## lesson12 动态组件和缓存机制
 
-1. 样式可以在任何地方设置，但是属性只能在创建的地方设置，调用的地方不能设置。
+1.component：动态组件
+2.keep-alive：缓存

@@ -1,32 +1,29 @@
 <template>
   <div id="app">
-    <FormHelper>
-      <h2 slot="title">{{ title }}</h2>
-      <p slot="content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat,
-        blanditiis.
-      </p>
-    </FormHelper>
+    <keep-alive>
+      <component :is="component"></component>
+    </keep-alive>
+
+    <button @click="component = 'form-one'">显示formone</button>
+    <button @click="component = 'form-two'">显示formtwo</button>
   </div>
 </template>
 
 <script>
-import FormHelper from './components/FormHelper.vue';
+import FormOne from "./components/FormOne.vue";
+import FormTwo from "./components/FormTwo.vue";
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      title: '这是标题',
+      component: "form-two"
     };
   },
   components: {
-    FormHelper,
-  },
+    "form-one": FormOne,
+    "form-two": FormTwo
+  }
 };
 </script>
 
-<style>
-h2 {
-  color: aqua;
-}
-</style>
+<style></style>
